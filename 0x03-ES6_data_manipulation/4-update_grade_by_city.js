@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default function updateStudentGradeByCity(students, city, newGrades) {
   return students
     .filter((obj) => obj.location === city)
@@ -5,7 +6,7 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
       obj.grade = 'N/A';
       for (const grade of newGrades) {
         if (grade.studentId === obj.id) {
-            obj.grade = grade.grade;
+          obj.grade = grade.grade;
         }
       }
       return obj;
