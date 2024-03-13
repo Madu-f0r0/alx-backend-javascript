@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   let returnString = '';
 
-  if ((startString instanceof String) && startString) {
+  if (typeof startString === 'string' && startString) {
     for (const setItem of set.values()) {
       if (setItem && setItem.startsWith(startString)) {
         returnString = `${returnString}-${setItem.slice(startString.length)}`;
