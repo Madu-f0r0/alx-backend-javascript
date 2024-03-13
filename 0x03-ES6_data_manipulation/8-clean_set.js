@@ -8,7 +8,7 @@ export default function cleanSet(set, startString) {
       }
     }
 
-    if (returnString) {
+    if (returnString.length > 0) {
       returnString = returnString.slice(1);
     }
   }
