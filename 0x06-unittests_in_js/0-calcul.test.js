@@ -36,7 +36,15 @@ describe('calculateNumber', () => {
     assert.strictEqual(sum, -3);
   });
   it('both args are rounded', () => {
+    const sum = calculateNumber(1, 2.4);
+    assert.strictEqual(sum, 3);
+  });
+  it('both args are rounded', () => {
     const sum = calculateNumber(1.5, 2.4);
     assert.strictEqual(sum, 4);
+  });
+  it('both args are rounded', () => {
+    const sum = calculateNumber(-1.5, -2.4);
+    assert.strictEqual(sum, -3);
   });
 });
